@@ -179,6 +179,7 @@
   const stage=document.getElementById('stage');
   function openCard(){ if(stage.classList.contains('open'))return; stage.classList.add('open'); document.body.classList.add('opened'); }
   stage.addEventListener('click',openCard);
+  setTimeout(openCard, 1000); // auto-open on load (no tap needed)
   stage.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCard();}});
 
   const cv=document.getElementById('petals'),ctx=cv.getContext('2d');
