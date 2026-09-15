@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- OG START -->
@@ -140,7 +143,8 @@
     .reveal,.bismillah{opacity:1 !important;animation:none !important}
   }
 </style>
-
+</head>
+<body>
 <canvas id="petals"></canvas>
 
 <div class="stage" id="stage" role="button" tabindex="0" aria-label="Ahsan and Maha Nikkah invitation">
@@ -210,3 +214,5 @@
   function loop(){ctx.clearRect(0,0,W,H);for(const p of petals){p.y+=p.sp;p.x+=Math.sin(p.y*.01)*p.sw;p.a+=p.va;if(p.y>H+20)Object.assign(p,mk(),{y:-20});draw(p);}requestAnimationFrame(loop);}
   if(!reduce)loop();else{for(const p of petals){p.y=Math.random()*H;draw(p);}}
 </script>
+</body>
+</html>
